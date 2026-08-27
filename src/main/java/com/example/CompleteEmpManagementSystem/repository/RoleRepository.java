@@ -1,0 +1,12 @@
+package com.example.CompleteEmpManagementSystem.repository;
+
+import com.example.CompleteEmpManagementSystem.model.Role;
+import com.example.CompleteEmpManagementSystem.model.RoleName;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface RoleRepository extends JpaRepository<Role, Long> {
+
+    Optional<Role> findByName(RoleName name);
+}
